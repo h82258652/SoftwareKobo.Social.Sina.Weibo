@@ -43,8 +43,8 @@ namespace SoftwareKobo.Social.Sina.Weibo
         private async Task<string> GetAuthorizeCodeAsync()
         {
             Uri requestUri = new Uri("https://api.weibo.com/oauth2/authorize");
-            requestUri = requestUri.AddOrUpdateQuery("client_id", WeiboAttribute.GetInstance().AppKey);
-            requestUri = requestUri.AddOrUpdateQuery("redirect_uri", WeiboAttribute.GetInstance().RedirectUrl);
+            requestUri = requestUri.AddOrUpdateQuery("client_id", WeiboSettings.AppKey);
+            requestUri = requestUri.AddOrUpdateQuery("redirect_uri", WeiboSettings.RedirectUri);
 
             if (DeviceHelper.IsDesktop)
             {
@@ -55,7 +55,7 @@ namespace SoftwareKobo.Social.Sina.Weibo
                 requestUri = requestUri.AddOrUpdateQuery("display", "mobile");
             }
 
-            WebAuthenticationResult result = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, requestUri, new Uri(WeiboAttribute.GetInstance().RedirectUrl));
+            WebAuthenticationResult result = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, requestUri, new Uri(WeiboSettings.RedirectUri));
             switch (result.ResponseStatus)
             {
                 case WebAuthenticationStatus.Success:
@@ -93,11 +93,11 @@ namespace SoftwareKobo.Social.Sina.Weibo
             Uri uri = new Uri("https://api.weibo.com/oauth2/access_token");
 
             Dictionary<string, string> postData = new Dictionary<string, string>();
-            postData.Add("client_id", WeiboAttribute.GetInstance().AppKey);
-            postData.Add("client_secret", WeiboAttribute.GetInstance().AppSecret);
+            postData.Add("client_id", WeiboSettings.AppKey);
+            postData.Add("client_secret", WeiboSettings.AppSecret);
             postData.Add("grant_type", "authorization_code");
             postData.Add("code", authorizeCode);
-            postData.Add("redirect_uri", WeiboAttribute.GetInstance().RedirectUrl);
+            postData.Add("redirect_uri", WeiboSettings.RedirectUri);
 
             HttpFormUrlEncodedContent content = new HttpFormUrlEncodedContent(postData);
 

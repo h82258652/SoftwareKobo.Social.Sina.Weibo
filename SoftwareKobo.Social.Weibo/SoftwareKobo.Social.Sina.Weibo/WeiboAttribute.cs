@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Reflection;
-using Windows.UI.Xaml;
 
 namespace SoftwareKobo.Social.Sina.Weibo
 {
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
     public class WeiboAttribute : Attribute
     {
-        private static WeiboAttribute _instance;
-
-        public WeiboAttribute(string appKey, string appSecret, string redirectUrl)
+        public WeiboAttribute(string appKey, string appSecret, string redirectUri)
         {
             this.AppKey = appKey;
             this.AppSecret = appSecret;
-            this.RedirectUrl = redirectUrl;
+            this.RedirectUri = redirectUri;
         }
 
         public string AppKey
@@ -28,20 +24,10 @@ namespace SoftwareKobo.Social.Sina.Weibo
             set;
         }
 
-        public string RedirectUrl
+        public string RedirectUri
         {
             get;
             set;
-        }
-
-        internal static WeiboAttribute GetInstance()
-        {
-            _instance = _instance ?? Application.Current.GetType().GetTypeInfo().Assembly.GetCustomAttribute<WeiboAttribute>();
-            if (_instance == null)
-            {
-                throw new ArgumentNullException("WeiboAttribute is not defined in main assembly.", nameof(_instance));
-            }
-            return _instance;
         }
     }
 }

@@ -2,9 +2,12 @@
 
 namespace SoftwareKobo.Social.Sina.Weibo.Utils
 {
-    public static class DeviceHelper
+    internal static class DeviceHelper
     {
-        public static bool IsDesktop
+        /// <summary>
+        /// 获取程序当前运行环境是否是桌面环境。
+        /// </summary>
+        internal static bool IsDesktop
         {
             get
             {
@@ -13,7 +16,10 @@ namespace SoftwareKobo.Social.Sina.Weibo.Utils
             }
         }
 
-        public static bool IsMobile
+        /// <summary>
+        /// 获取程序当前运行环境是否是移动设备环境。
+        /// </summary>
+        internal static bool IsMobile
         {
             get
             {
