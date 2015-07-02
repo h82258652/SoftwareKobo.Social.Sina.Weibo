@@ -8,13 +8,13 @@ Windows 10 新浪微博 SDK
 
 在你的项目中添加
 ```
-[assembly:Weibo(yourAppKey,yourAppSecret,yourAppRedirectUrl)]
+[assembly:Weibo(yourAppKey,yourAppSecret,yourAppRedirectUri)]
 ```
 建议在AssemblyInfo.cs文件中添加
 
 参考此文件：https://github.com/h82258652/SoftwareKobo.Social.Sina.Weibo/blob/master/SoftwareKobo.Social.Sina.Weibo/Test/Properties/AssemblyInfo.cs
 
-yourAppRedirectUrl 为授权回调页，请到新浪微博开发平台中的高级信息中设置
+yourAppRedirectUri 为授权回调页，请到新浪微博开发平台中的高级信息中设置
 
 ## 2、在需要的地方创建 WeiboClient
 
