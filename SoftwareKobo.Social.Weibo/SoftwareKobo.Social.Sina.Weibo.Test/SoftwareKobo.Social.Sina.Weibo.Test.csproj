@@ -11,14 +11,15 @@
     <AssemblyName>SoftwareKobo.Social.Sina.Weibo.Test</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10069.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10069.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.10158.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10158.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>SoftwareKobo.Social.Weibo.Test_TemporaryKey.pfx</PackageCertificateKeyFile>
     <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">14.0</UnitTestPlatformVersion>
     <EnableCoreRuntime>false</EnableCoreRuntime>
+    <EnableDotNetNativeCompatibleProfile>false</EnableDotNetNativeCompatibleProfile>
   </PropertyGroup>
   <PropertyGroup>
     <AppXPackage>True</AppXPackage>
