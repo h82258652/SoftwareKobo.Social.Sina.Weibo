@@ -12,7 +12,7 @@ Windows 10 新浪微博 SDK
 ```
 建议在AssemblyInfo.cs文件中添加
 
-参考此文件：https://github.com/h82258652/SoftwareKobo.Social.Sina.Weibo/blob/master/SoftwareKobo.Social.Sina.Weibo/Test/Properties/AssemblyInfo.cs
+参考此文件：https://github.com/h82258652/SoftwareKobo.Social.Sina.Weibo/blob/master/SoftwareKobo.Social.Weibo/Test/Properties/AssemblyInfo.cs
 
 yourAppRedirectUri 为授权回调页，请到新浪微博开发平台中的高级信息中设置
 
@@ -34,7 +34,7 @@ ErrorCode对应的信息请查看http://open.weibo.com/wiki/Error_code
 
 2、3点请注意捕获异常
 
-正确捕获异常和使用请参考https://github.com/h82258652/SoftwareKobo.Social.Sina.Weibo/blob/master/SoftwareKobo.Social.Sina.Weibo/Test/MainPage.xaml.cs
+正确捕获异常和使用请参考https://github.com/h82258652/SoftwareKobo.Social.Sina.Weibo/blob/master/SoftwareKobo.Social.Weibo/Test/MainPage.xaml.cs
 
 ### PS：不要问我为什么没有封装微博API的其它功能，本项目主打分享。
 ### PS2：生产环境中使用请自行负责。
