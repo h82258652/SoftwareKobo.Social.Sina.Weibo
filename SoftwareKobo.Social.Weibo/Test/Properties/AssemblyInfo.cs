@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: ComVisible(false)]
 
-[assembly:SoftwareKobo.Social.Weibo.Weibo("3097392152", "415e12c92c17c2f5398ceed393794bc2", "http://weibo.com/u/5523030798")]
+[assembly:SoftwareKobo.Social.Sina.Weibo.Weibo("3097392152", "415e12c92c17c2f5398ceed393794bc2", "http://weibo.com/u/5523030798")]

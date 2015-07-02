@@ -2,7 +2,7 @@
 using System.Reflection;
 using Windows.UI.Xaml;
 
-namespace SoftwareKobo.Social.Weibo
+namespace SoftwareKobo.Social.Sina.Weibo
 {
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
     public class WeiboAttribute : Attribute

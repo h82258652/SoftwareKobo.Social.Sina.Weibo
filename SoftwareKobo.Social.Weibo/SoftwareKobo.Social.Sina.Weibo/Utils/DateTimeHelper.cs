@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SoftwareKobo.Social.Weibo.Utils
+namespace SoftwareKobo.Social.Sina.Weibo.Utils
 {
     internal static class DateTimeHelper
     {

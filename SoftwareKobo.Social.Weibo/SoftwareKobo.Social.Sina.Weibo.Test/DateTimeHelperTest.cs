@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using SoftwareKobo.Social.Weibo.Utils;
+using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System;
 
-namespace SoftwareKobo.Social.Weibo.Test
+namespace SoftwareKobo.Social.Sina.Weibo.Test
 {
     [TestClass]
     public class DateTimeHelperTest

@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.Web;
 
-namespace SoftwareKobo.Social.Weibo
+namespace SoftwareKobo.Social.Sina.Weibo
 {
     public class HttpException : Exception
     {

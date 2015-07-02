@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using SoftwareKobo.Social.Weibo.Utils;
+using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System.Collections.Generic;
 
-namespace SoftwareKobo.Social.Weibo.Test
+namespace SoftwareKobo.Social.Sina.Weibo.Test
 {
     [TestClass]
     public class UriHelperTest

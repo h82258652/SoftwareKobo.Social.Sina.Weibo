@@ -105,7 +105,6 @@
     </AppxManifest>
     <None Include="ApplicationInsights.config" />
     <None Include="packages.config" />
-    <None Include="Test_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\唱歌1.png" />
@@ -149,7 +148,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SoftwareKobo.Social.Weibo\SoftwareKobo.Social.Weibo.csproj">
+    <ProjectReference Include="..\SoftwareKobo.Social.Sina.Weibo\SoftwareKobo.Social.Sina.Weibo.csproj">
       <Project>{d61bb4f2-76a2-4844-a454-4dd597374527}</Project>
       <Name>SoftwareKobo.Social.Weibo</Name>
     </ProjectReference>

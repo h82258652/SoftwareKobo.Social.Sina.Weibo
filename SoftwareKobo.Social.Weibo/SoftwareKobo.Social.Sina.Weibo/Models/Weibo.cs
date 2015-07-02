@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SoftwareKobo.Social.Weibo.Models
+namespace SoftwareKobo.Social.Sina.Weibo.Models
 {
     /// <summary>
     /// 微博（status）

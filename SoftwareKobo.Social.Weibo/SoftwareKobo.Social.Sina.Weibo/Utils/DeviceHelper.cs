@@ -1,6 +1,6 @@
 ﻿using Windows.ApplicationModel.Resources.Core;
 
-namespace SoftwareKobo.Social.Weibo.Utils
+namespace SoftwareKobo.Social.Sina.Weibo.Utils
 {
     public static class DeviceHelper
     {

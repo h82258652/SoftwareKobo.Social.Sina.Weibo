@@ -1,8 +1,8 @@
-﻿using SoftwareKobo.Social.Weibo.Utils;
+﻿using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System;
 using Windows.Storage;
 
-namespace SoftwareKobo.Social.Weibo
+namespace SoftwareKobo.Social.Sina.Weibo
 {
     internal static class LocalAccessToken
     {

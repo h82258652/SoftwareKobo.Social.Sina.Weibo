@@ -1,4 +1,4 @@
-﻿using SoftwareKobo.Social.Weibo;
+﻿using SoftwareKobo.Social.Sina.Weibo;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;

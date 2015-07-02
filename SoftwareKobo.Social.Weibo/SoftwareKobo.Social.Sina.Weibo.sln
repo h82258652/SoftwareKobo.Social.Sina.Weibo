@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareKobo.Social.Weibo", "SoftwareKobo.Social.Weibo\SoftwareKobo.Social.Weibo.csproj", "{D61BB4F2-76A2-4844-A454-4DD597374527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareKobo.Social.Sina.Weibo", "SoftwareKobo.Social.Sina.Weibo\SoftwareKobo.Social.Sina.Weibo.csproj", "{D61BB4F2-76A2-4844-A454-4DD597374527}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F11245BA-1BA2-47BD-BF5D-07A400AB38D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareKobo.Social.Weibo.Test", "SoftwareKobo.Social.Weibo.Test\SoftwareKobo.Social.Weibo.Test.csproj", "{2D56CC89-B589-4045-A380-F492B67E32F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareKobo.Social.Sina.Weibo.Test", "SoftwareKobo.Social.Sina.Weibo.Test\SoftwareKobo.Social.Sina.Weibo.Test.csproj", "{2D56CC89-B589-4045-A380-F492B67E32F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

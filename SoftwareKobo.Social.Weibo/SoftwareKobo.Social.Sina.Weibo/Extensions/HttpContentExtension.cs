@@ -3,7 +3,7 @@ using System;
 using System.Threading.Tasks;
 using Windows.Web.Http;
 
-namespace SoftwareKobo.Social.Weibo.Extensions
+namespace SoftwareKobo.Social.Sina.Weibo.Extensions
 {
     internal static class HttpContentExtension
     {

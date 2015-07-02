@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using Windows.Foundation;
 
-namespace SoftwareKobo.Social.Weibo.Utils
+namespace SoftwareKobo.Social.Sina.Weibo.Utils
 {
     internal static class UriHelper
     {

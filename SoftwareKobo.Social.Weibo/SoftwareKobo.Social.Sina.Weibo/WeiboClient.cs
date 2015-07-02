@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using SoftwareKobo.Social.Weibo.Extensions;
-using SoftwareKobo.Social.Weibo.Utils;
+using SoftwareKobo.Social.Sina.Weibo.Extensions;
+using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Windows.Security.Authentication.Web;
 using Windows.Web.Http;
 
-namespace SoftwareKobo.Social.Weibo
+namespace SoftwareKobo.Social.Sina.Weibo
 {
     public class WeiboClient
     {

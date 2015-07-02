@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.Security.Authentication.Web;
 
-namespace SoftwareKobo.Social.Weibo
+namespace SoftwareKobo.Social.Sina.Weibo
 {
     public class AuthorizeException : Exception
     {
