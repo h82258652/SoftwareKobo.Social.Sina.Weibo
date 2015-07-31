@@ -4,7 +4,9 @@ using SoftwareKobo.Social.Sina.Weibo.Extensions;
 using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Authentication.Web;
 using Windows.Web.Http;
@@ -126,6 +128,7 @@ namespace SoftwareKobo.Social.Sina.Weibo
                 LocalAccessToken.ExpiresAt = sendRequestTime.ToTimestamp() + expires;
             }
         }
+
 
         /// <summary>
         /// 分享文本到微博中。

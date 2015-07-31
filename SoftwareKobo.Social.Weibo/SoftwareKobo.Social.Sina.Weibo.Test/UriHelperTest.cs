@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+﻿using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using SoftwareKobo.Social.Sina.Weibo.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace SoftwareKobo.Social.Sina.Weibo.Test
@@ -27,11 +27,11 @@ namespace SoftwareKobo.Social.Sina.Weibo.Test
 
             uri = new Uri("http://www.baidu.com?name=tom");
             uri2 = uri.AddOrUpdateQuery("name", "mary");
-            Assert.AreEqual(uri2.ToString(), "http://www.baidu.com/?name=mary");        
+            Assert.AreEqual(uri2.ToString(), "http://www.baidu.com/?name=mary");
 
-            uri=new Uri("http://www.baidu.com");
+            uri = new Uri("http://www.baidu.com");
             uri2 = uri.AddOrUpdateQuery("t", "&");
-            Assert.AreEqual(uri2.ToString(),"http://www.baidu.com/?t=%26");
+            Assert.AreEqual(uri2.ToString(), "http://www.baidu.com/?t=%26");
         }
 
         [TestMethod]
@@ -40,7 +40,7 @@ namespace SoftwareKobo.Social.Sina.Weibo.Test
             Uri uri, uri2;
 
             uri = new Uri("http://www.baidu.com");
-            uri2 = uri.AddOrUpdateQuery(new Dictionary<string, string>() { { "sex", "male" }, {"name","tom" } });
+            uri2 = uri.AddOrUpdateQuery(new Dictionary<string, string>() { { "sex", "male" }, { "name", "tom" } });
 
             Assert.AreEqual(uri2.ToString(), "http://www.baidu.com/?sex=male&name=tom");
         }

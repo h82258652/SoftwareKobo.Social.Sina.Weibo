@@ -7,20 +7,20 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="fad13ad4-3b64-4899-a0d6-085d96d653bc"
+    Name="57f18fd6-a324-494b-81ca-c3e30805ea9d"
     Publisher="CN=h8225"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="fad13ad4-3b64-4899-a0d6-085d96d653bc" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="57f18fd6-a324-494b-81ca-c3e30805ea9d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Test</DisplayName>
+    <DisplayName>Demo</DisplayName>
     <PublisherDisplayName>h8225</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10069.0" MaxVersionTested="10.0.10069.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
 
   <Resources>
@@ -30,13 +30,14 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="Test.App">
+      EntryPoint="Demo.App">
       <uap:VisualElements
-        DisplayName="Test"
-        Square150x150Logo="Assets\Logo.png"
-        Square44x44Logo="Assets\SmallLogo.png"
-        Description="Test"
-        BackgroundColor="#464646">
+        DisplayName="Demo"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="Demo"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

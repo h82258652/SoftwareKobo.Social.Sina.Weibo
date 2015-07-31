@@ -6,7 +6,7 @@ namespace SoftwareKobo.Social.Sina.Weibo.Models
     /// 微博（status）
     /// </summary>
     [JsonObject]
-    public class Weibo:ShareResultBase
+    public class Weibo : ShareResultBase
     {
         /// <summary>
         /// 微博创建时间

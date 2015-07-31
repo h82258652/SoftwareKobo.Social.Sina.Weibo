@@ -25,7 +25,7 @@ namespace SoftwareKobo.Social.Sina.Weibo.Models
             get;
             set;
         }
-        
+
         /// <summary>
         /// 分享是否成功
         /// </summary>
