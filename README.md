@@ -1,4 +1,4 @@
-# SoftwareKobo.Social.Sina.Weibo
+﻿# SoftwareKobo.Social.Sina.Weibo
 Windows 10 新浪微博 SDK
 
 （目前仅有简单的分享功能）
@@ -28,7 +28,9 @@ yourAppRedirectUri 为授权回调页，请到新浪微博开发平台中的高�
 
 分享图片 ShareImage 方法
 
-需要注意 text 参数不能为空白字符串，超过140字符上限目前未封装，请调用完毕后检查返回对象的IsSuccess属性和ErrorCode属性。
+需要注意 text 参数不能为空白字符串，不能超过 140 字符上限（一个中文一个字符，2个数字或英文算一个字符），否则会抛出 ArgumentException。
+
+另外请调用完毕后检查返回对象的IsSuccess属性和ErrorCode属性。
 
 ErrorCode对应的信息请查看http://open.weibo.com/wiki/Error_code
 

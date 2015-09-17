@@ -37,9 +37,10 @@ namespace Demo
                     await new MessageDialog("分享失败，错误码" + shareResult.ErrorCode).ShowAsync();
                 }
             }
-            catch (ArgumentException)
+            catch (ArgumentException ex)
             {
-                await new MessageDialog("请输入分享文本，且不能为空白字符串").ShowAsync();
+                // 空字符串或长度超过 140。
+                await new MessageDialog(ex.Message).ShowAsync();
             }
             catch (AuthorizeException ex)
             {
@@ -77,9 +78,10 @@ namespace Demo
                     await new MessageDialog("分享失败，错误码" + shareResult.ErrorCode).ShowAsync();
                 }
             }
-            catch (ArgumentException)
+            catch (ArgumentException ex)
             {
-                await new MessageDialog("请输入图片描述，且不能为空白字符串").ShowAsync();
+                // 空字符串或长度超过 140。
+                await new MessageDialog(ex.Message).ShowAsync();
             }
             catch (AuthorizeException ex)
             {

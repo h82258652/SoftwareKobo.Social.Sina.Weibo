@@ -151,6 +151,7 @@ namespace SoftwareKobo.Social.Sina.Weibo
             {
                 throw new ArgumentException("text could not be empty", nameof(text));
             }
+            VerifyTextLength(text);
 
             if (LocalAccessToken.Useable == false)
             {
@@ -209,6 +210,7 @@ namespace SoftwareKobo.Social.Sina.Weibo
             {
                 throw new ArgumentException("text could not be empty", nameof(text));
             }
+            VerifyTextLength(text);
 
             if (LocalAccessToken.Useable == false)
             {
@@ -238,6 +240,17 @@ namespace SoftwareKobo.Social.Sina.Weibo
                     throw new HttpException("network error", ex);
                 }
                 return await response.Content.ReadAsJsonAsync<Models.Weibo>();
+            }
+        }
+
+        private const int MAX_TEXT_LENGTH = 140;
+
+        private static void VerifyTextLength(string text)
+        {
+            Encoding gb2312 = Encoding.GetEncoding("gb2312");
+            if (gb2312.GetByteCount(text) > MAX_TEXT_LENGTH * 2)
+            {
+                throw new ArgumentException("text too long", nameof(text));
             }
         }
     }
