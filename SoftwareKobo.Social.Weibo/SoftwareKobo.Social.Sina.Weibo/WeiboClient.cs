@@ -15,6 +15,12 @@ namespace SoftwareKobo.Social.Sina.Weibo
 {
     public class WeiboClient
     {
+        static WeiboClient()
+        {
+            EncodingProvider provider = CodePagesEncodingProvider.Instance;
+            Encoding.RegisterProvider(provider);
+        }
+
         private WeiboClient()
         {
         }
