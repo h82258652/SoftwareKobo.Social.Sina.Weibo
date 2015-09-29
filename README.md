@@ -36,7 +36,7 @@ yourAppRedirectUri 为授权回调页，请到新浪微博开发平台中的高�
 
 ErrorCode对应的信息请查看http://open.weibo.com/wiki/Error_code
 
-\<div style="color:red;"\>另外还要注意 ErrorCode 为 21332 的场合，这个状态码在上面微博文档中是没有的。具体情境为：用户本地授权了 App，然后在微博设置中删除了授权。如果返回该状态码的话，建议逻辑是：清空本地授权 access token（参考上面 Part 2 的清除本地授权数据），然后再重新执行授权和分享。\</div\>
+<font color="red">另外还要注意 ErrorCode 为 21332 的场合，这个状态码在上面微博文档中是没有的。具体情境为：用户本地授权了 App，然后在微博设置中删除了授权。如果返回该状态码的话，建议逻辑是：清空本地授权 access token（参考上面 Part 2 的清除本地授权数据），然后再重新执行授权和分享。</font>
 
 2、3点请注意捕获异常
 
