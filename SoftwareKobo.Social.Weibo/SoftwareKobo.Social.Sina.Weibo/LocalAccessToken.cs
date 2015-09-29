@@ -6,17 +6,23 @@ namespace SoftwareKobo.Social.Sina.Weibo
 {
     internal static class LocalAccessToken
     {
-        private static readonly ApplicationDataContainer _weiboDatas = ApplicationData.Current.LocalSettings.CreateContainer("weibo", ApplicationDataCreateDisposition.Always);
+        private static ApplicationDataContainer WeiboDatas
+        {
+            get
+            {
+                return ApplicationData.Current.LocalSettings.CreateContainer("weibo", ApplicationDataCreateDisposition.Always);
+            }
+        }
 
         internal static string Token
         {
             get
             {
-                return (string)_weiboDatas.Values["Token"];
+                return (string)WeiboDatas.Values["Token"];
             }
             set
             {
-                _weiboDatas.Values["Token"] = value;
+                WeiboDatas.Values["Token"] = value;
             }
         }
 
@@ -24,11 +30,11 @@ namespace SoftwareKobo.Social.Sina.Weibo
         {
             get
             {
-                return (string)_weiboDatas.Values["Uid"];
+                return (string)WeiboDatas.Values["Uid"];
             }
             set
             {
-                _weiboDatas.Values["Uid"] = value;
+                WeiboDatas.Values["Uid"] = value;
             }
         }
 
@@ -36,11 +42,11 @@ namespace SoftwareKobo.Social.Sina.Weibo
         {
             get
             {
-                return (long)_weiboDatas.Values["ExpiresAt"];
+                return (long)WeiboDatas.Values["ExpiresAt"];
             }
             set
             {
-                _weiboDatas.Values["ExpiresAt"] = value;
+                WeiboDatas.Values["ExpiresAt"] = value;
             }
         }
 
@@ -51,23 +57,23 @@ namespace SoftwareKobo.Social.Sina.Weibo
         {
             get
             {
-                if (_weiboDatas.Values.ContainsKey("Token") == false)
+                if (WeiboDatas.Values.ContainsKey("Token") == false)
                 {
                     return false;
                 }
-                if (string.IsNullOrEmpty((string)_weiboDatas.Values["Token"]))
+                if (string.IsNullOrEmpty((string)WeiboDatas.Values["Token"]))
                 {
                     return false;
                 }
-                if (_weiboDatas.Values.ContainsKey("Uid") == false)
+                if (WeiboDatas.Values.ContainsKey("Uid") == false)
                 {
                     return false;
                 }
-                if (string.IsNullOrEmpty((string)_weiboDatas.Values["Uid"]))
+                if (string.IsNullOrEmpty((string)WeiboDatas.Values["Uid"]))
                 {
                     return false;
                 }
-                if (_weiboDatas.Values.ContainsKey("ExpiresAt") == false)
+                if (WeiboDatas.Values.ContainsKey("ExpiresAt") == false)
                 {
                     return false;
                 }
