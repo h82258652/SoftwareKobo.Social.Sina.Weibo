@@ -4,15 +4,18 @@ using SoftwareKobo.Social.Sina.Weibo.Extensions;
 using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Authentication.Web;
+using Windows.Storage;
 using Windows.Web.Http;
 
 namespace SoftwareKobo.Social.Sina.Weibo
 {
+    /// <summary>
+    /// 处理新浪微博的授权与分享。
+    /// </summary>
     public class WeiboClient
     {
         static WeiboClient()
@@ -23,6 +26,14 @@ namespace SoftwareKobo.Social.Sina.Weibo
 
         private WeiboClient()
         {
+        }
+
+        /// <summary>
+        /// 清除本地授权数据。
+        /// </summary>
+        public static void ClearAuthorize()
+        {
+            ApplicationData.Current.LocalSettings.DeleteContainer("weibo");
         }
 
         /// <summary>
@@ -134,7 +145,6 @@ namespace SoftwareKobo.Social.Sina.Weibo
                 LocalAccessToken.ExpiresAt = sendRequestTime.ToTimestamp() + expires;
             }
         }
-
 
         /// <summary>
         /// 分享文本到微博中。
