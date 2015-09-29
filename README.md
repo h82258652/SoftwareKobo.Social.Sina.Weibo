@@ -22,7 +22,7 @@ yourAppRedirectUri 为授权回调页，请到新浪微博开发平台中的高�
 
 如需清除本地授权数据，请清空或删除LocalSettings下的名为weibo的ApplicationDataContainer。
 
-可以调用WeiboClient.ClearAuthorize()方法来清除。
+可以调用```WeiboClient.ClearAuthorize()```方法来清除。
 
 ## 3、选择分享文本还是分享图片
 
