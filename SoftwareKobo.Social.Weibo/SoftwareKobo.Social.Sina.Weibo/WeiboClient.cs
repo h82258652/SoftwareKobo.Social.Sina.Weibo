@@ -5,7 +5,6 @@ using SoftwareKobo.Social.Sina.Weibo.Utils;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Authentication.Web;
 using Windows.Storage;
@@ -18,12 +17,6 @@ namespace SoftwareKobo.Social.Sina.Weibo
     /// </summary>
     public class WeiboClient
     {
-        static WeiboClient()
-        {
-            EncodingProvider provider = CodePagesEncodingProvider.Instance;
-            Encoding.RegisterProvider(provider);
-        }
-
         private WeiboClient()
         {
         }
@@ -167,12 +160,11 @@ namespace SoftwareKobo.Social.Sina.Weibo
             {
                 throw new ArgumentException("text could not be empty", nameof(text));
             }
-            VerifyTextLength(text);
 
             if (LocalAccessToken.Useable == false)
             {
-                string authorizeCode = await this.GetAuthorizeCodeAsync();
-                await this.Authorize(authorizeCode);
+                string authorizeCode = await GetAuthorizeCodeAsync();
+                await Authorize(authorizeCode);
             }
 
             Uri uri = new Uri("https://api.weibo.com/2/statuses/update.json");
@@ -226,12 +218,11 @@ namespace SoftwareKobo.Social.Sina.Weibo
             {
                 throw new ArgumentException("text could not be empty", nameof(text));
             }
-            VerifyTextLength(text);
 
             if (LocalAccessToken.Useable == false)
             {
-                string authorizeCode = await this.GetAuthorizeCodeAsync();
-                await this.Authorize(authorizeCode);
+                string authorizeCode = await GetAuthorizeCodeAsync();
+                await Authorize(authorizeCode);
             }
 
             Uri uri = new Uri("https://upload.api.weibo.com/2/statuses/upload.json");
@@ -256,17 +247,6 @@ namespace SoftwareKobo.Social.Sina.Weibo
                     throw new HttpException("network error", ex);
                 }
                 return await response.Content.ReadAsJsonAsync<Models.Weibo>();
-            }
-        }
-
-        private const int MAX_TEXT_LENGTH = 140;
-
-        private static void VerifyTextLength(string text)
-        {
-            Encoding gb2312 = Encoding.GetEncoding("gb2312");
-            if (gb2312.GetByteCount(text) > MAX_TEXT_LENGTH * 2)
-            {
-                throw new ArgumentException("text too long", nameof(text));
             }
         }
     }
