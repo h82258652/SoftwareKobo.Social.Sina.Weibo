@@ -1,6 +1,9 @@
 ﻿# SoftwareKobo.Social.Sina.Weibo
 Windows 10 新浪微博 SDK
 
+# 已过期，请使用  
+https://github.com/h82258652/HN.Social.Weibo
+
 （目前仅有简单的分享功能）
 
 # 使用方法：
